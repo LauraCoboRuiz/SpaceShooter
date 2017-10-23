@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C0F2FD83-E3B6-44A5-BA6B-C857FD387CED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpaceShooter</RootNamespace>
+    <AssemblyName>SpaceShooter</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AudioManager.cs" />
+    <Compile Include="GameObjects\Boss.cs" />
+    <Compile Include="GameObjects\Enemy.cs" />
+    <Compile Include="GameObjects\EnemyType1.cs" />
+    <Compile Include="GameObjects\EnemyType2.cs" />
+    <Compile Include="GameObjects\EnemyType3.cs" />
+    <Compile Include="GameObjects\Explosion.cs" />
+    <Compile Include="GameObjects\Player.cs" />
+    <Compile Include="GameObjects\Rock.cs" />
+    <Compile Include="GameObjects\Shot.cs" />
+    <Compile Include="GameObjects\Shot1.cs" />
+    <Compile Include="GameObjects\Shot2.cs" />
+    <Compile Include="GameObjects\ShotBoss.cs" />
+    <Compile Include="GameObjects\ShotBoss1.cs" />
+    <Compile Include="GameObjects\ShotBoss2.cs" />
+    <Compile Include="GameObjects\ShotEnemy1.cs" />
+    <Compile Include="GameObjects\ShotsEnemy.cs" />
+    <Compile Include="InputManager.cs" />
+    <Compile Include="Screens\BossScreen.cs" />
+    <Compile Include="Screens\EndingScreen.cs" />
+    <Compile Include="Screens\EndingScreen2.cs" />
+    <Compile Include="Screens\GameplayScreen.cs" />
+    <Compile Include="Screens\TitleScreen.cs" />
+    <Compile Include="Screens\LogoScreen.cs" />
+    <Compile Include="SpaceGame.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\audio\Genos.mp3" />
+    <Content Include="Content\audio\Laser.mp3" />
+    <Content Include="Content\audio\Levi.mp3" />
+    <Content Include="Content\audio\logo.wav" />
+    <Content Include="Content\audio\ping.wav" />
+    <Content Include="Content\audio\Sarutobi.mp3" />
+    <Content Include="Content\audio\start.wav" />
+    <Content Include="Content\audio\TUBBELLS.MOD" />
+    <Content Include="Content\fonts\sketch_01.png" />
+    <Content Include="Content\fonts\sketch_02.png" />
+    <Content Include="Content\graphics\b.png" />
+    <Content Include="Content\graphics\backEndingLose.png" />
+    <Content Include="Content\graphics\backEndingWin.png" />
+    <Content Include="Content\graphics\background.png" />
+    <Content Include="Content\graphics\backgroundgame.png" />
+    <Content Include="Content\graphics\backLvl101.png" />
+    <Content Include="Content\graphics\backLvl102.png" />
+    <Content Include="Content\graphics\backLvl103.png" />
+    <Content Include="Content\graphics\backLvl104.png" />
+    <Content Include="Content\graphics\backSmoke.png" />
+    <Content Include="Content\graphics\backTitle.png" />
+    <Content Include="Content\graphics\ball.png" />
+    <Content Include="Content\graphics\bar.png" />
+    <Content Include="Content\graphics\bar01.png" />
+    <Content Include="Content\graphics\bar02.png" />
+    <Content Include="Content\graphics\barboss.png" />
+    <Content Include="Content\graphics\barenemy.png" />
+    <Content Include="Content\graphics\barlife01.png" />
+    <Content Include="Content\graphics\barlife02.png" />
+    <Content Include="Content\graphics\barmana01.png" />
+    <Content Include="Content\graphics\barmana02.png" />
+    <Content Include="Content\graphics\barplayer.png" />
+    <Content Include="Content\graphics\boss.png" />
+    <Content Include="Content\graphics\boss01.png" />
+    <Content Include="Content\graphics\buttonStart.png" />
+    <Content Include="Content\graphics\button_Controls.png" />
+    <Content Include="Content\graphics\button_default.png" />
+    <Content Include="Content\graphics\button_exit.png" />
+    <Content Include="Content\graphics\b_0001.png" />
+    <Content Include="Content\graphics\cloud.png" />
+    <Content Include="Content\graphics\cursor.png" />
+    <Content Include="Content\graphics\enemy.png" />
+    <Content Include="Content\graphics\enemy001.png" />
+    <Content Include="Content\graphics\enemy002.png" />
+    <Content Include="Content\graphics\enemy003.png" />
+    <Content Include="Content\graphics\enemy004.png" />
+    <Content Include="Content\graphics\explosion_basic.png" />
+    <Content Include="Content\graphics\explosion_pro.png" />
+    <Content Include="Content\graphics\flyenemy.png" />
+    <Content Include="Content\graphics\life.png" />
+    <Content Include="Content\graphics\logo.png" />
+    <Content Include="Content\graphics\player001.png" />
+    <Content Include="Content\graphics\rock01.png" />
+    <Content Include="Content\graphics\shot.png" />
+    <Content Include="Content\graphics\shot001.png" />
+    <Content Include="Content\graphics\shot002.png" />
+    <Content Include="Content\graphics\shot003.png" />
+    <Content Include="Content\graphics\shot004.png" />
+    <Content Include="Content\graphics\shot005.png" />
+    <Content Include="Content\graphics\spaceship.png" />
+    <Content Include="Content\graphics\superShot.png" />
+    <Content Include="Content\graphics\superShot1.png" />
+    <Content Include="Content\graphics\superShot2.png" />
+    <Content Include="Content\graphics\title.png" />
+    <Content Include="Content\graphics\title01.png" />
+    <Content Include="Content\graphics\title02.png" />
+    <Content Include="Icon.ico" />
+    <Content Include="Space Invaders 3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+    <None Include="Content\audio\beyond_-_spacerace %281%29.ogg" />
+    <None Include="Content\audio\spacediver.ogg" />
+    <None Include="Content\audio\spaceship.ogg" />
+    <None Include="Content\fonts\debug.spritefont" />
+    <None Include="Content\fonts\basic.spritefont" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
